@@ -124,35 +124,73 @@
 
 
 // EPISODE 7
-let murderer = 'Professor Plum';
+// let murderer = 'Professor Plum';
 
-const changeMurderer = function() {
-    murderer = 'Mr. Green';
+// const changeMurderer = function() {
+//     murderer = 'Mr. Green';
 
-  const plotTwist = function() {
-    let murderer = 'Colonel Mustard';
+//   const plotTwist = function() {
+//     let murderer = 'Colonel Mustard';
 
-    const unexpectedOutcome = function() {
-        murderer = 'Miss Scarlet';
-    }
+//     const unexpectedOutcome = function() {
+//         murderer = 'Miss Scarlet';
+//     }
 
-    unexpectedOutcome();
-  }
+//     unexpectedOutcome();
+//   }
 
-//   plotTwist();
-}
+// //   plotTwist();
+// }
 
-const declareMurderer = function() {
-  return `The murderer is ${murderer}.`;
-}
+// const declareMurderer = function() {
+//   return `The murderer is ${murderer}.`;
+// }
 
-changeMurderer();
-const verdict = declareMurderer();
-console.log(verdict);
+// changeMurderer();
+// const verdict = declareMurderer();
+// console.log(verdict);
 // "The murderer is Miss Scarlet."
 // Comment - I think that the variables that are not labeled as let or const will be var types. The logic should return Miss Scarlet. 
 // WRONG - Not following the logic with this one. 
 
 
+// EPISODE 8 
+const scenario = {
+    murderer: 'Mrs. Peacock',
+    room: 'Conservatory',
+    weapon: 'Lead Pipe'
+  };
+  
+  const changeScenario = function() {
+    scenario.murderer = 'Mrs. Peacock';
+    scenario.room = 'Dining Room';
+  
+    const plotTwist = function(room) {
+      if (scenario.room === room) {
+        scenario.murderer = 'Colonel Mustard';
+      }
+  
+      const unexpectedOutcome = function(murderer) {
+        if (scenario.murderer === murderer) {
+          scenario.weapon = 'Candle Stick';
+        }
+      }
+  
+      unexpectedOutcome('Colonel Mustard');
+    }
+  
+    plotTwist('Dining Room');
+  }
+  
+  const declareWeapon = function() {
+    return `The weapon is ${scenario.weapon}.`
+  }
+  
+  changeScenario();
+  const verdict = declareWeapon();
+  console.log(verdict);
+// "The weapon is Candle Stick."
+// Comment - The logic leads you to update the key value pair to weapon: "Candle Stick"
+// CORRECT
 
 
