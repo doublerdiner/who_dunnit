@@ -76,25 +76,50 @@
 
 
 // EPISODE 5
-const scenario = {
-    murderer: 'Miss Scarlet',
-    room: 'Kitchen',
-    weapon: 'Candle Stick'
-  };
+// const scenario = {
+//     murderer: 'Miss Scarlet',
+//     room: 'Kitchen',
+//     weapon: 'Candle Stick'
+//   };
   
-  const changeWeapon = function(newWeapon) {
-    scenario.weapon = newWeapon;
-  }
+//   const changeWeapon = function(newWeapon) {
+//     scenario.weapon = newWeapon;
+//   }
   
-  const declareWeapon = function() {
-    return `The weapon is the ${scenario.weapon}.`;
-  }
+//   const declareWeapon = function() {
+//     return `The weapon is the ${scenario.weapon}.`;
+//   }
   
-  changeWeapon('Revolver');
-  const verdict = declareWeapon();
-  console.log(verdict);
+//   changeWeapon('Revolver');
+//   const verdict = declareWeapon();
+//   console.log(verdict);
 // "The weapon is the Revolver."
 // Comment - The values within the object can be modified even though the scenario has been set as a constant variable. 
+// CORRECT
+
+
+// EPISODE 6
+let murderer = 'Colonel Mustard';
+
+const changeMurderer = function() {
+  murderer = 'Mr. Green';
+
+  const plotTwist = function() {
+    murderer = 'Mrs. White';
+  }
+
+  plotTwist();
+}
+
+const declareMurderer = function () {
+  return `The murderer is ${murderer}.`;
+}
+
+changeMurderer();
+const verdict = declareMurderer();
+console.log(verdict);
+// "The murderer is Mrs. White."
+// Comment - The changeMurderer function has another function contained within it. That function is called before the changeMurderer function ends. 
 // CORRECT
 
 
