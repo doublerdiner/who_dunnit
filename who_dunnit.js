@@ -155,42 +155,59 @@
 
 
 // EPISODE 8 
-const scenario = {
-    murderer: 'Mrs. Peacock',
-    room: 'Conservatory',
-    weapon: 'Lead Pipe'
-  };
+// const scenario = {
+//     murderer: 'Mrs. Peacock',
+//     room: 'Conservatory',
+//     weapon: 'Lead Pipe'
+//   };
   
-  const changeScenario = function() {
-    scenario.murderer = 'Mrs. Peacock';
-    scenario.room = 'Dining Room';
+//   const changeScenario = function() {
+//     scenario.murderer = 'Mrs. Peacock';
+//     scenario.room = 'Dining Room';
   
-    const plotTwist = function(room) {
-      if (scenario.room === room) {
-        scenario.murderer = 'Colonel Mustard';
-      }
+//     const plotTwist = function(room) {
+//       if (scenario.room === room) {
+//         scenario.murderer = 'Colonel Mustard';
+//       }
   
-      const unexpectedOutcome = function(murderer) {
-        if (scenario.murderer === murderer) {
-          scenario.weapon = 'Candle Stick';
-        }
-      }
+//       const unexpectedOutcome = function(murderer) {
+//         if (scenario.murderer === murderer) {
+//           scenario.weapon = 'Candle Stick';
+//         }
+//       }
   
-      unexpectedOutcome('Colonel Mustard');
-    }
+//       unexpectedOutcome('Colonel Mustard');
+//     }
   
-    plotTwist('Dining Room');
-  }
+//     plotTwist('Dining Room');
+//   }
   
-  const declareWeapon = function() {
-    return `The weapon is ${scenario.weapon}.`
-  }
+//   const declareWeapon = function() {
+//     return `The weapon is ${scenario.weapon}.`
+//   }
   
-  changeScenario();
-  const verdict = declareWeapon();
-  console.log(verdict);
+//   changeScenario();
+//   const verdict = declareWeapon();
+//   console.log(verdict);
 // "The weapon is Candle Stick."
 // Comment - The logic leads you to update the key value pair to weapon: "Candle Stick"
 // CORRECT
 
+
+// EPISODE 9
+let murderer = 'Professor Plum';
+
+if (murderer === 'Professor Plum') {
+  let murderer = 'Mrs. Peacock';
+}
+
+const declareMurderer = function() {
+  return `The murderer is ${murderer}.`;
+}
+
+const verdict = declareMurderer();
+console.log(verdict);
+// "The murderer is Professor Plum."
+// Comment - The let variable is local. It won't let you redefine the variable within the if statement. 
+// CORRECT
 
