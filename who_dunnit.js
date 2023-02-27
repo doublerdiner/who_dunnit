@@ -99,28 +99,60 @@
 
 
 // EPISODE 6
-let murderer = 'Colonel Mustard';
+// let murderer = 'Colonel Mustard';
+
+// const changeMurderer = function() {
+//   murderer = 'Mr. Green';
+
+//   const plotTwist = function() {
+//     murderer = 'Mrs. White';
+//   }
+
+//   plotTwist();
+// }
+
+// const declareMurderer = function () {
+//   return `The murderer is ${murderer}.`;
+// }
+
+// changeMurderer();
+// const verdict = declareMurderer();
+// console.log(verdict);
+// "The murderer is Mrs. White."
+// Comment - The changeMurderer function has another function contained within it. That function is called before the changeMurderer function ends. 
+// CORRECT
+
+
+// EPISODE 7
+let murderer = 'Professor Plum';
 
 const changeMurderer = function() {
-  murderer = 'Mr. Green';
+    murderer = 'Mr. Green';
 
   const plotTwist = function() {
-    murderer = 'Mrs. White';
+    let murderer = 'Colonel Mustard';
+
+    const unexpectedOutcome = function() {
+        murderer = 'Miss Scarlet';
+    }
+
+    unexpectedOutcome();
   }
 
-  plotTwist();
+//   plotTwist();
 }
 
-const declareMurderer = function () {
+const declareMurderer = function() {
   return `The murderer is ${murderer}.`;
 }
 
 changeMurderer();
 const verdict = declareMurderer();
 console.log(verdict);
-// "The murderer is Mrs. White."
-// Comment - The changeMurderer function has another function contained within it. That function is called before the changeMurderer function ends. 
-// CORRECT
+// "The murderer is Miss Scarlet."
+// Comment - I think that the variables that are not labeled as let or const will be var types. The logic should return Miss Scarlet. 
+// WRONG - Not following the logic with this one. 
+
 
 
 
